@@ -16,14 +16,19 @@ body {
     padding: 32px;
 }
 
-.container {
-    padding: 80px 0;
-}
-
 .row {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.container {
+    padding: 80px 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 ul {
@@ -34,172 +39,246 @@ li {
     list-style-type: none;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+.link__primary {
+    color: #f7fafc;
+    background-color: #6949f5;
+    padding: 12px 32px;
+    border-radius: 24px;
+    transition: 300MS ease;
 }
 
-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 200px;
-    padding: 0 50px;
+.link__primary:hover {
+    background-color: #370f89;
 }
 
-.text--blue {
-    color: rgb(100, 21, 255);
+button.link__primary {
+    border: none;
 }
 
-.text--white {
-    color: white;
+p {
+    color: #243e63;
+}
+
+.text__color {
+    color: #6949f5;
 }
 
 
-/* Landing Page */ 
 
-#landing {
-    width: 100%;
-    max-width: 1200px;
-}
+/* 
+
+NAV
+
+*/
 
 nav {
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 30px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    display: flex;
+    align-items: center;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo__img {
+    margin-right: 12px;
     width: 40px;
-    height: 40px;
 }
 
-.logo__title {
+.nav__logo--link {
+    font-size: 24px;
     font-weight: 900;
-    font-size: 1.5rem;
-    color: rgb(65, 65, 65);
-    letter-spacing: 0.025rem;
-    margin-left: 15px;
+    color: #243e63;
 }
 
-.nav__links {
-    display: flex;
-    align-items: center;
+.nav__logo--link:hover {
+    color: #6949f5;
+}
+
+.nav__link--style {
+    color: #243e63;
+    padding-bottom: 3px;
+}
+
+.nav__link--space {
+    margin-left: 48px !important;
 }
 
 .nav__link {
-    margin: 0 15px;
-    font-weight: 600;
-    letter-spacing: 1px;
+    margin: 0 24px;
     font-size: 14px;
-    color: rgb(49, 49, 49);
-    position: relative;
-    transition: 300ms ease;
+    font-weight: bold;
+    transition: all 300ms ease;
 }
 
-.link__primary {
-    color: #f7fafc;
-    background-color: #6415ff;
-    padding: 12px 32px;
-    border-radius: 24px;
-    transition: 300ms ease;
+.nav__link--line:hover {
+    color: #6949f5;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 1.5px;
 }
 
-header {
-    display: flex
+/* 
+
+
+MENU 
+
+
+*/ 
+
+.btn__menu {
+    background-color: transparent;
+    font-size: 40px;
+    text-align: center;
+    border: none;
+    color: #6949f5;
+    display: none;
 }
 
-.header__body {
-    width: 100%;
+.btn__menu:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.menu__backdrop {
+    position: absolute;
+    background-color: #242424;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
     display: flex;
-    margin: 100px 0 0 0;
-    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease;
+    opacity: 0;
+    visibility: hidden;
 }
 
-.header__container {
-    /* display: flex;
+.menu--open .menu__backdrop {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+.menu--open {
+    max-height: 100vh;
+    overflow-y: hidden;
+  }
+  
+.menu__links {
+    display: flex;
     flex-direction: column;
-    width: 50%;
-    height: fit-content;
-    margin-right: 60px;
-    justify-content: space-around; */
+    align-items: center;
+  }
+  
+.menu__list {
+    padding: 32px;
+  }
+  
+.menu__link {
+    font-size: 40px;
+    color: #f7fafc;
+  }
+  
+.btn__menu--close {
+    position: absolute;
+    right: 28px;
+    top: 10px;
+    padding: 8px;
+    color: #f7fafc;
+  }
+
+
+  /* 
+
+
+  HEADER
+
+
+  */ 
+
+  .header {
+    display: flex;
+  }
+
+  .header__column {
     display: flex;
     flex-direction: column;
     padding: 32px 0;
     width: 40%;
-}
+  }
 
-.header__title {
-    font-size: 45px;
-}
+  .header__title {
+    font-size: 48px;
+    color: #242424;
+  }
 
-.header__description {
+.header__info {
     font-size: 18px;
-    line-height: 20px;
-    margin: 24px 0;
-    color: rgb(65, 65, 65);
+    margin: 32px 0;
 }
 
-.header__banner {
-    font-size: 13px;
-    font-weight: 700;
-    margin: 24px 0;
-    color: rgb(160, 174, 192);
-
-}
-
-.header__page--img {
-  position: relative;
-  width: 60%;  
-}
-
-.customers {
-    opacity: 0.7;
-    width: 100%;
-}
-
-.input__header {
-    width: 80%;
-    min-width: 300px;
+.header__input {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    max-width: 450px;
+    margin-left: 0;
+    margin-right: 0;
     position: relative;
-    border-radius: 30px;
+    text-align: center;
 }
 
-.input {
+.header__input input {
     width: 100%;
-    height: 60px;
-    padding: 20px;
-    border: 2px solid rgb(209, 209, 209);
-    display: flex;
-    position: relative;
-    border-radius: 30px;
+    padding: 20px 190px 20px 30px;
+    font-size: 100%;
+    font-weight: 500;
+    border: 2px solid #e5e7eb;
+    border-radius: 32px;
+    transition-property: border-color;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
 }
 
-.header__button {
-    background-color: #6415ff;
-    border: none;
-    border-radius: 30px;
-    color: white;
-    padding: 15px;
-    font-weight: 700;
-    height: 76%;
-    display: flex;
-    align-items: center;
+.header__input .header__button {
     position: absolute;
-    right: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 160px;
+    line-height: 1;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    padding: 16px 0;
+    font-size: 100%;
+    border: 0px;
+    transition: all 300ms ease;
 }
 
-.header__page--img {
-    width: 60%;
-    position: relative;
+.header__customer {
+    margin-top: 48px;
 }
+
+.header__customer--para {
+    color: #878a88;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.header__customer--img {
+    width: 90%;
+    opacity: 0.7;
+}
+
+.header__img {
+    position: relative;
+    width: 60%;
+}
+

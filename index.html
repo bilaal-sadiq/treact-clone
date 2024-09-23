@@ -5,81 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Treact</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
   </head>
   <body>
     <section id="landing">
-        <div class="row"> 
-
-            
-            <!-- NAV -->
-            <nav>
-            <div class="logo">
-            <img
-              src="./assets/treactLogo.svg"
-              alt="logo img"
-              class="logo__img"
-            />
-            <div class="logo__title">Treact</div>
-          </div>
+      <div class="row">
+        <!-- NAV -->
+        <nav>
+          <a class="nav__logo nav__logo--link" href="">
+            <img src="./assets/treactLogo.svg" alt="" class="logo" />
+            Treact
+          </a>
           <ul class="nav__links">
-            <li class="nav__link">
-                <a href="nav__link">About</a>
+            <li>
+                <a class="nav__link nav__link--line nav__link--style" href="">About</a>
             </li>
-            <li class="nav__link">
-                <a href="nav__link">Blog</a>
+            <li>
+                <a class="nav__link nav__link--line nav__link--style" href="">Blog</a>
             </li>
-            <li class="nav__link">
-              <a href="nav__link">Pricing</a>
+            <li>
+                <a class="nav__link nav__link--line nav__link--style" href="">Pricing</a>
             </li>
-            <li class="nav__link">
-              <a href="nav__link">Contact Us</a>
+            <li>
+                <a class="nav__link nav__link--line nav__link--style" href="">Contact Us</a>
             </li>
-            <li class="nav__link">
-              <a href="nav__link">Login</a>
+            <li>
+                <a class="nav__link nav__link--line nav__link--style" href="">Login</a>
             </li>
-            <li class="nav__link link__primary">
-                <a href="nav__link">Sign Up</a>
+            <li>
+                <a class="nav__link link__primary" href="">Sign Up</a>
             </li>
-        </ul>
-    </nav>
-    
-    <!-- Landing Page -->
-
+          </ul>
+          <button class="btn__menu" onclick="openMenu()">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+          </button>
+          <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <ul class="menu__links">
+                <li class="menu__list" onclick="closeMenu()">About</li>
+                <li class="menu__list" onclick="closeMenu()">Blog</li>
+                <li class="menu__list" onclick="closeMenu()">Pricing</li>
+                <li class="menu__list" onclick="closeMenu()">Contact Us</li>
+                <li class="menu__list" onclick="closeMenu()">Login</li>
+                <li class="menu__list" onclick="closeMenu()">Sign Up</li>
+            </ul>
+          </div>
+        </nav>
+        
+        <!-- Landing Page -->
         <header>
-
             <div class="container">
-                <div class="header__container">
+                <div class="header">
+                   <div class="header__landing">
                     <h1 class="header__title">
-                        Beautiful React Templeates <span class="text--blue">for you.</span>
+                        Beautiful React Templates  
+                        <span class="text__color"> for you.</span>
                     </h1>
-          <p class="header__description">
-            Our templates are easy to setup, understand and customise. Fully
-            modular components with a variety of pages and components.
-        </p>
-        <div class="input__header">
-            <input type="text" placeholder="Your Email Address" class="input" />
-            <button class="header__button">Get Started</button>
-          </div>
-          <div>
-            <p class="header__banner">Our Trusted Customers</p>
-            <img
-            src="./assets/companies.png"
-              alt="trusted customers"
-              class="customers"
-              />
-          </div>
-          <img
-            src="./assets/landingWork.svg"
-            alt="home page img"
-            class="header__page--img"
-            />
-        </div>
+                    <p class="header__info">
+                      Our templated are ease to setup, understand and customize.
+                    Fully modular components with a variety of pages and
+                    components.
+                    </p>
+                    <div class="header__input">
+                        <input type="text" placeholder="Your Email Address">
+                        <button class="link__primary header__button">Get Started</button>
+                    </div>
+                    <div class="header__customer">
+                        <p class="header__customer--para">OUR TRUSTED CUSTOMERS</p>
+                        <img src="./assets/companies.png" class="header__customer--img">
+                    </div>
+                   </div> 
+                   <img src="./assets/landingWork.svg" class="header__img">
+                </div>
+            </div>
+        </header>
+
     </div>
-</header>
-
-
-
-</div>
     </section>
   </body>
 </html>
