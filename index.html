@@ -22,22 +22,32 @@
           </a>
           <ul class="nav__links">
             <li>
-                <a class="nav__link nav__link--line nav__link--style" href="">About</a>
+              <a class="nav__link nav__link--line nav__link--style" href=""
+                >About</a
+              >
             </li>
             <li>
-                <a class="nav__link nav__link--line nav__link--style" href="">Blog</a>
+              <a class="nav__link nav__link--line nav__link--style" href=""
+                >Blog</a
+              >
             </li>
             <li>
-                <a class="nav__link nav__link--line nav__link--style" href="">Pricing</a>
+              <a class="nav__link nav__link--line nav__link--style" href=""
+                >Pricing</a
+              >
             </li>
             <li>
-                <a class="nav__link nav__link--line nav__link--style" href="">Contact Us</a>
+              <a class="nav__link nav__link--line nav__link--style" href=""
+                >Contact Us</a
+              >
             </li>
             <li>
-                <a class="nav__link nav__link--line nav__link--style" href="">Login</a>
+              <a class="nav__link nav__link--line nav__link--style" href=""
+                >Login</a
+              >
             </li>
             <li>
-                <a class="nav__link link__primary" href="">Sign Up</a>
+              <a class="nav__link link__primary" href="">Sign Up</a>
             </li>
           </ul>
           <button class="btn__menu" onclick="openMenu()">
@@ -45,48 +55,168 @@
           </button>
           <div class="menu__backdrop">
             <button class="btn__menu btn__menu--close" onclick="closeMenu()">
-                <i class="fas fa-times" aria-hidden="true"></i>
+              <i class="fas fa-times" aria-hidden="true"></i>
             </button>
             <ul class="menu__links">
-                <li class="menu__list" onclick="closeMenu()">About</li>
-                <li class="menu__list" onclick="closeMenu()">Blog</li>
-                <li class="menu__list" onclick="closeMenu()">Pricing</li>
-                <li class="menu__list" onclick="closeMenu()">Contact Us</li>
-                <li class="menu__list" onclick="closeMenu()">Login</li>
-                <li class="menu__list" onclick="closeMenu()">Sign Up</li>
+              <li class="menu__list" onclick="closeMenu()">About</li>
+              <li class="menu__list" onclick="closeMenu()">Blog</li>
+              <li class="menu__list" onclick="closeMenu()">Pricing</li>
+              <li class="menu__list" onclick="closeMenu()">Contact Us</li>
+              <li class="menu__list" onclick="closeMenu()">Login</li>
+              <li class="menu__list" onclick="closeMenu()">Sign Up</li>
             </ul>
           </div>
         </nav>
-        
+
         <!-- Landing Page -->
         <header>
-            <div class="container">
-                <div class="header">
-                   <div class="header__landing">
-                    <h1 class="header__title">
-                        Beautiful React Templates  
-                        <span class="text__color"> for you.</span>
-                    </h1>
-                    <p class="header__info">
-                      Our templated are ease to setup, understand and customize.
-                    Fully modular components with a variety of pages and
-                    components.
-                    </p>
-                    <div class="header__input">
-                        <input type="text" placeholder="Your Email Address">
-                        <button class="link__primary header__button">Get Started</button>
-                    </div>
-                    <div class="header__customer">
-                        <p class="header__customer--para">OUR TRUSTED CUSTOMERS</p>
-                        <img src="./assets/companies.png" class="header__customer--img">
-                    </div>
-                   </div> 
-                   <img src="./assets/landingWork.svg" class="header__img">
+          <div class="container">
+            <div class="header">
+              <div class="header__landing">
+                <h1 class="header__title">
+                  Beautiful React Templates
+                  <span class="text__color"> for you.</span>
+                </h1>
+                <p class="header__info">
+                  Our templated are ease to setup, understand and customize.
+                  Fully modular components with a variety of pages and
+                  components.
+                </p>
+                <div class="header__input">
+                  <input type="text" placeholder="Your Email Address" />
+                  <button class="link__primary header__button">
+                    Get Started
+                  </button>
                 </div>
+                <div class="header__customer">
+                  <p class="header__customer--para">OUR TRUSTED CUSTOMERS</p>
+                  <img
+                    src="./assets/companies.png"
+                    class="header__customer--img"
+                  />
+                </div>
+              </div>
+              <img src="./assets/landingWork.svg" class="header__img" />
             </div>
+          </div>
         </header>
-
     </div>
-    </section>
+</section>
+
+        <!-- FEATURES -->
+        <section id="features">
+          <div class="container">
+            <div class="row features__row">
+              <h3 class="section__title">FEATURES</h3>
+              <h1 class="section__heading">
+                We have Amazing <span class="text__color">Service</span>
+              </h1>
+              <p class="section__para features__para">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Maiores sit earum iste amet numquam? Tenetur.
+              </p>
+              <div class="services">
+                <div class="service">
+                  <div class="service__logo">
+                    <img
+                      src="./assets/shield.svg"
+                      alt=""
+                      class="service__logo--img"
+                    />
+                  </div>
+                  <div class="service__text">
+                    <h2 class="service__text--title">Secure</h2>
+                    <p class="service__text--para">
+                      We strictly only deal with vendores that provide top
+                      security.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="service">
+                  <div class="service__logo">
+                    <img
+                      src="./assets/support-icon.svg"
+                      alt=""
+                      class="service__logo--img"
+                    />
+                  </div>
+                  <div class="service__text">
+                    <h2 class="service__text--title">24/7 Support</h2>
+                    <p class="service__text--para">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Fugit, odit!
+                    </p>
+                  </div>
+                </div>
+                <div class="service">
+                  <div class="service__logo">
+                    <img
+                      src="./assets/customize.svg"
+                      alt=""
+                      class="service__logo--img"
+                    />
+                  </div>
+                  <div class="service__text">
+                    <h2 class="service__text--title">Customizable</h2>
+                    <p class="service__text--para">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Officia, corporis.
+                    </p>
+                  </div>
+                </div>
+                <div class="service">
+                  <div class="service__logo">
+                    <img
+                      src="./assets/reliable-icon.svg"
+                      alt=""
+                      class="service__logo--img"
+                    />
+                  </div>
+                  <div class="service__text">
+                    <h2 class="service__text--title">Reliable</h2>
+                    <p class="service__text--para">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Omnis, culpa?
+                    </p>
+                  </div>
+                </div>
+                <div class="service">
+                  <div class="service__logo">
+                    <img
+                      src="./assets/fast-icon.svg"
+                      alt=""
+                      class="service__logo--img"
+                    />
+                  </div>
+                  <div class="service__text">
+                    <h2 class="service__text--title">Fast</h2>
+                    <p class="service__text--para">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Omnis, labore.
+                    </p>
+                  </div>
+                </div>
+                <div class="service">
+                  <div class="service__logo">
+                    <img
+                      src="./assets/simple-icon.svg"
+                      alt=""
+                      class="service__logo--img"
+                    />
+                  </div>
+                  <div class="service__text">
+                    <h2 class="service__text--title">Easy</h2>
+                    <p class="service__text--para">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Omnis, labore.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
   </body>
 </html>
