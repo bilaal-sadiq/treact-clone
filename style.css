@@ -597,7 +597,7 @@ PRICING
 
 .plans {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
     align-items: center;
     justify-content: space-between;
 }
@@ -614,20 +614,7 @@ PRICING
     border: 1px solid lightgrey;
 }
 
-.plan-green {
-    margin: 64px 0 0 0;
-}
 
-.plan__styled-green {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 8px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
-}
 
 .plan__header {
     display: flex;
@@ -643,10 +630,18 @@ PRICING
     font-weight: 700;
 }
 
+.plan-green .plan__header--title, .plan-red .plan__header--title {
+    color: #1a202c;
+}
+
 .plan__header--price {
     font-size: 48px;
     font-weight: 700;
     margin: 4px 0;
+}
+
+.plan-green .plan__header--price, .plan-red .plan__header--price {
+    color: #1a202c;
 }
 
 .plan__header--time {
@@ -654,16 +649,202 @@ PRICING
     letter-spacing: 1.6;
 }
 
-.plan-green .plan__header--time {
+.plan-green .plan__header--time, .plan-red .plan__header--time {
     color: #a0aec0;
     opacity: 1;
 }
+
+.plan__content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 32px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.plan__content--audience {
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+}
+
+.plan-green .plan__content--audience, .plan-red .plan__content--audience {
+    color: #1a202c;
+}
+
+.plan__content--feature {
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.plan-green .plan__content--feature, .plan-red .plan__content--feature {
+    color: #1a202c;
+}
+
+.plan-green .plan__content--feature, .plan-red .plan__content--feature {
+    color: #a0aec0;
+}
+
+.plan__button {
+    padding: 32px;
+}
+
+.plan__button--buy-now-green, .plan__button--buy-now-white, .plan__button--buy-now-red {
+    padding: 16px 32px;
+    width: 100%;
+    transition: all 300ms ease;
+}
+
+.plan__button--buy-now-green:hover, .plan__button--buy-now-white:hover, .plan__button--buy-now-red:hover {
+    transform: scale(1.03);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 
+
+PLAN GREEN
+
+*/ 
+
+.plan-green {
+    margin: 64px 0 0 0;
+}
+
+.plan__styled-green {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+}
+
+.plan__button--buy-now-green {
+    background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+    text-transform: uppercase;
+}
+
+/* 
+
+
+PLAN MIDDLE 
+
+
+*/ 
 
 .plan-middle {
     background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
     margin: 64px 0 0 0;
 }
 
+
+.plan-middle .plan__header--title {
+    color: #f7fafc;
+}
+
+.plan-middle .plan__header--price {
+    color: #f7fafc;
+}
+
+.plan-middle .plan__header--time {
+    color: #f7fafc;
+}
+
+.plan-middle .plan__content--audience {
+    color: #f7fafc;
+}
+
+.plan-middle .plan__content--feature {
+    color: #f7fafc;
+}
+
+.plan__button--buy-now-white {
+    background: #f7fafc;
+    color: #6415ff;
+    text-transform: uppercase;
+}
+
+.plan__button--buy-now-white:hover {
+    background-color: #f7fafcc0;
+}
+
+
+/* 
+
+PLAN RED
+
+*/ 
+
 .plan-red {
     margin: 64px 0 0 0;
+}
+
+.plan__styled-red {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
+}
+
+.plan__button--buy-now-red {
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
+    text-transform: uppercase;
+}
+
+/* 
+
+Testimonial
+
+*/
+
+
+.testimonial__row {
+    display: flex;
+}
+
+.testimonial__img {
+    width: 50%;
+    padding: 32px 0;
+    display: flex;
+    align-items: center;
+}
+
+.testimonial__section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 64px;
+}
+
+.testimonial__list {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.testimonial {
+    position: absolute;
+    width: 100%;
+}
+
+.rating {
+    margin: 30px 0 20px 0;
+
+}
+
+
+.testimonial__title {
+    
+}
+
+.testimonial__description {
+    max-width: 320px;
+    
 }
