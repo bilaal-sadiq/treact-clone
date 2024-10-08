@@ -172,7 +172,7 @@ MENU
 
 .menu__backdrop {
     position: absolute;
-    background-color: #242424;
+    background-color: #f4efef;
     top: 0;
     left: 0;
     right: 0;
@@ -208,7 +208,7 @@ MENU
   
 .menu__link {
     font-size: 40px;
-    color: #f7fafc;
+    color: #030303;
   }
   
 .btn__menu--close {
@@ -582,7 +582,6 @@ PRICING
 .pricing__row {
     display: flex;
     flex-direction: column;
-    max-width: 900px;
 }
 
 .pricing__row--header {
@@ -598,20 +597,22 @@ PRICING
 }
 
 .plans {
-    width: 100%;
     display: flex;
+    flex-wrap: wrap !important;
+    align-items: center;
     justify-content: space-between;
 }
 
 .plan {
     display: flex;
     flex-direction: column;
+    text-align: center;
     position: relative;
     border-radius: 8px;
     padding: 8px 32px 0 32px;
     max-width: 360px;
-    width: 30%;
-    border: 1px solid lightgrey;
+    width: 100%;
+    border: 1px solid lightgray;
 }
 
 
@@ -1307,6 +1308,7 @@ footer {
         align-items: center;
         justify-content: center;
     }
+    
 
     .end__row {
         display: flex;
@@ -1340,10 +1342,13 @@ footer {
         width: 100%;
     }
 
-    .pricing__row .section__heading {
-        width: 100%;
-        margin: 0 auto;
-        text-align: center;
+    .plans {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .plan {
+        margin-top: 32px;
     }
 
     .nav__links {
@@ -1365,6 +1370,23 @@ footer {
         width: 100%;
         margin: 0 auto;
         text-align: center;
+    }
+
+    .faq__expand {
+        height: 190px;
+    }
+
+  }
+
+  @media (max-width: 768px) {
+
+    .testimonial__row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .testimonial {
+        height: 400px;
     }
   }
 
@@ -1510,10 +1532,9 @@ footer {
     .work__row {
         display: flex;
         flex-direction: column-reverse;
-        align-items: center;
     }
     
-    work__text {
+    .work__text {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1610,6 +1631,26 @@ footer {
         width: 90%;
     }
 
+    .testimonial__row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .testimonial__img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+    .testimonial__section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+    }
+
     .end__row {
         display: flex;
         flex-direction: column;
@@ -1676,7 +1717,76 @@ footer {
         font-size: 18px;
     }
 
+}
 
+@media (max-width: 563px) {
+    .faq__expand {
+        height: 270px;
+    }
+
+    .testimonial {
+        height: 500px;
+    }
+}
+
+@media (max-width: 510px) {
+    .faq__title {
+        font-size: 12px;
+    }
+
+    .faq {
+        height: 50px;
+    }
+
+    .faq__expand {
+        height: 230px;
+    }
+
+    .faq__description {
+        font-size: 12px;
+    }
+
+    .faq__open {
+        top: 15px;
+    }
+
+    .input__container {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 440px) {
+    .section__heading {
+        font-size: 30px;
+    }
+
+    .testimonial__postion {
+        font-size: 12px;
+    }
+
+    .testimonial__name {
+        font-size: 12px;
+    }
+
+    .faq__title {
+        font-size: 10px;
+    }
+
+    .faq {
+        height: 50px;
+    }
+
+    .faq__expand {
+        height: 230px;
+    }
+
+    .faq__description {
+        font-size: 10px;
+    }
+
+    .faq__open {
+        top: 12px;
+    }
 
 }
 
